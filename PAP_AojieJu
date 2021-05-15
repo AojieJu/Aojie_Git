@@ -1,0 +1,529 @@
+---
+title: 'Final Project for PS 531: A Pre-Analysis Plan'
+author: 'Aojie Ju'
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+header-includes:
+  - \usepackage{bm}
+output:
+  pdf_document:
+    number_sections: true
+    fig_caption: yes
+    fig_height: 8
+    fig_width: 8
+    latex_engine: xelatex
+    citation_package: biblatex
+    keep_tex: true
+fontsize: 10pt
+geometry: "left=1.25in,right=1.25in,top=1in,bottom=1in"
+graphics: yes
+mainfont: "Times New Roman"
+bibliography: classbib.bib
+biblio-style: "authoryear-comp,natbib"
+---
+
+
+\section{Research Question}
+Our study aims to understand how negative campaigning strategies in American politics change the turnout and strength of party identification among voters in different ethnic groups. Based on social identity theory (Tajfel and Turner 1979), the existing theories proposed by Mendelberg (Mendelberg 2001) and Valentino (Valentino et al. 2002) about implicit/explicit messaging, and the previous discussions about the cross-pressured voters (Hillygus and Shields 2008), I try to outline a novel theoretical approach to explain the negativity's effects by conducting a survey experiment. 
+
+I create the ethnic-partisan intersection to test the conditional effect on different voters of negative advertisements. How would people react to the negative messages and change vote decisions and their loyalty to the political parties? This question matters because it is a key to explain the psychological motivation of American's political polarization. It still remains to be answered in our project.
+
+\section{Hypotheses and How It Connects to Theories}
+Based on existing theories, here are the hypotheses we have.\\
+
+\textit{H1a: Negative ads released by Democrats attacking Republicans for white-favoring issues increase the turnout of white Republicans and non-white Democrats.}\\
+
+\textit{H1b: Negative ads released by Republicans attacking Democrats for non-white-favoring issues increase the turnout of white Republicans and non-white Democrats.}\\
+
+\textit{H2a: Negative ads released by Democrats attacking Republicans for white-favoring issues reinforce white Republicans, non-white Democrats, and white Democrats' original party identification.}\\
+
+\textit{H2b: Negative ads released by Republicans attacking Democrats for non-white-favoring issues reinforce white Republicans, non-white Democrats, and white Democrats' original party identification.}\\
+
+\textit{H2c: Negative ads released by Democrats attacking Republicans for white-favoring issues decrease non-white Republicans' original party identification.}\\
+
+\textit{H2d: Negative ads released by Republicans attacking Democrats for non-white-favoring issues decrease non-white Republicans' original party identification.}\\
+
+Existing theories justify our hypotheses by claiming why certain implicit negative messages will reinforce people's partisanship, and why cross-pressured voters are persuadable when they receive cues about racial and partisan information. 
+
+\section{Data and Research Design}
+In terms of the survey-experimental design, I decide to recruit respondents in Virginia, as the elections for the Virginia House of Delegates will take place in 2021. After its primary on June 8, I am able to ask the respondents pre-treatment questions and conduct the experiment after then. They will be recruited and categorized in a $2\times 2$ matrix. 
+
+\begin{table}[htp!]
+	\begin{center}
+		\caption{How Respondents Are Categorized}
+		\begin{tabular}{c|c|c}
+			\hline
+			& Democratic Supporters & Republican Supporters \\
+			\hline
+			White & & \\
+			\hline
+			Non-White & & \\
+			\hline
+		\end{tabular}
+	\end{center}
+\end{table}
+I will pose three treatments in the experiment. The control group will not be presented negative ads. The first treatment group will be presented an ad that is not about race. The second treatment group will be presented a negative ad released by Democrats attacking Republicans for white-favoring issues. The third treatment group, conversely, will be presented a negative ad released by Democrats attacking Republicans for white-favoring issues. I include the complete survey questions in the appendix.
+
+
+\section{Advantages and Disadvantages}
+I will conduct a survey experiment in English, as the qualified subjects must be registered Virginia residents.
+
+The reason I decide to conduct the survey experiment is due to its appropriateness to test negativity. It is difficult to test the effect of a negative ad in an observational study, as there are too many confounders that we should exclude. However, a lab environment can exclude the effect of confounders, although it makes me face the trade-off between confounders and temporary effects of survey experiments.
+
+However, though a lab environment works to exclude confounders, a distinct disadvantage is the disparity to the real political world. For instance, negative messages mobilize voters to vote in the real world. However, they appear to discourage voters from voting in a lab environment. Therefore, I will employ some methods to test if there is disparity.
+
+\section{Measurement}
+The core outcomes we try to measure are voter turnout and the strength of their party identification. In pre-treatment questions, I ask \textit{Have you registered for the election of the Virginia House of Delegates on November 2?} and \textit{Will you register for the election of the Virginia House of Delegates on November 2?} as the measurement of turnout. I do not ask "whether you will vote" in case I deliver a too explicit message to coerce the subjects to give a social-desired answer (for instance, "Yes, I will."). I use \textit{If yes for Q10 and Q11, which party have you registered (or will you register) for?} and \textit{How strongly do you support the party you registered (or will register) for?} to measure their PID strength. I will recode these two variables and generate a new 7-point scale to indicate the Republican-Democrat spectrum. In the post-treatment questions, I ask \textit{Do you still plan to vote or not for the State House Election?} to measure the turnout, and \textit{If yes, which party will you vote for?} and \textit{How strongly do you support the party you will vote for?} to measure their PID strength. Again, I will recode the latter two variables to create a new 7-point scale. 
+
+In terms of covariance adjustment, I will include people's gender, citizenship, educational attainment, income level, and rural/urban disaggregation.
+
+\section{Potential Weakness}
+As we have to conduct the survey in a lab environment, we face the risk that the ads contain racial cues too explicitly and Hawthorne effects might encourage respondents to provide social-desirable answers. Therefore, I ask the questions \textit{Have you registered for the primary election of the Virginia House of Delegates on June 8?} and \textit{Have you voted for the last election of the Virginia House of Delegates?}. If people's past political participation has a strong association with their answers about registering for this election, we can say that the data is not biased by social desirability.
+
+\section{Randomization}
+As our research is based on a randomization design, we should do a randomization-justified test, which aims to prove that every experimental unit is the same under one assignment as under other alternative assignments. In my study, I will first compute test statistics (the mean differences) between the control group and the three treatment groups. After I get the test statistics of the original data, I combine the assigned data and shuffle them. Then, I will repeat the data division following the same manner of the original assignment. After repeated permutations, I will get new test statistic for each permutation. If most new test statistics are greater or equal to the original test statistics, we are able to claim that the original data is randomly assigned. 
+
+\section{Handling the Missing Data}
+I have considered multiple solutions to handle the likely missing data, especially the missing information of my outcome variables. However, I still decide to simply listwise the missing values. At first, all my outcome variables except the scaled party identification are binary variables. If I employ other methods, such as regression imputation, the data might be biased, as the predicted values are neither binary nor discrete. Moreover, as it might be non-random issues that cause the missing information (for example, people with a specific party identification might be more likely to conceal their opinions), predictions might be very different from people's actual attitudes. Therefore, although listwising missing value might lead to less valid samples and weaker statistical power, the effects we get are less biased.
+
+
+\section{Statistical Tests}
+I first create a small dataframe to simulate our experiment (See the Code Appendix). I plan to use permutation tests in my testing work. Compared to other tests, for example, a CLT+IID justified test, a permutation test does not necessarily require a basis of central limit theorem. As our study contain four intersected groups (white Republicans and Democrats, non-white Republicans and Democrats), their scaled party identification cannot be normally distributed, no matter how large the sample size is. Therefore, a better approach is to employ the permutation test. However, given that we have three treatment groups, we need three different test statistics for our tests. Therefore, we should also engage with multiple testing to show the FWER.
+
+\section{Evaluation of Tests and Their Performance}
+I will use family-wise error rate to evaluate the performance of the test. Below are how the permutation test performs and the evaluation through getting FWER.
+
+Performing the codes, I will first run the permutation test and compare the mean differences between the original assignment and the permuted assignments. Then, we get the adjusted p-values through XBalance function. At last, we will get the adjusted family-wise error rate by getting the mean of the adjusted false positive rate.
+
+\section{Estimator and Estimand}
+The estimands that the estimator uses to estimate is the causal effects of non-racial negative ad, ad released by Democrats attacking Republicans, and ad released by Republicans atttacking Democrats. I denote them by $\tau_1$, $\tau_2$, and $\tau_3$. However, I cannot get the true values of the estimands directly, as each subject cannot be staying in more than one assignment group. Therefore, I will choose several estimators to estimate the treatment effect. I will compare the outcome of Rosenbaum's covariance adjustment method with the coefficient of the treatment variable in linear regression (with and without covariance adjustment).
+
+\section{Assessing the Estimators}
+I will assess the estimators by bias and the mean squared errors. Bias indicates how much the estimators deviate from the true treatment effects. MSE indicates how small variance the estimators have and thus whether they have consistency or not. 
+
+\section{How Estimators Perform}
+Below are the codes that compute different estimators and compare them with each other. 
+
+The first estimator is simply the coefficient of the new treatment in linear regression with covariance adjustment. The second, however, is the coefficient without covariance adjustment. The third is the coefficient of the treatment when regressing with the residuals of outcome variable without including the residual of treatment itself.
+
+Then I compare the MSE of each estimator to test their consistency. I first create the function of computing MSE. Then I compute the MSE by using the models of getting estimators. 
+
+\section{Appendix}
+\subsecion{Codes}
+
+```{r loading packages, echo=TRUE,message=TRUE,error=FALSE,tidy=TRUE}
+library(here)
+source(here("rmd_setup.R"))
+library(tidyverse)
+library(coin)
+library(DeclareDesign)
+library(randomizr)
+library(foreach)
+library(doParallel)
+library(robustbase)
+cl <- makeCluster(4) ## 4 cores
+registerDoParallel(cl)
+```
+
+```{r creating a small dataframe, echo=TRUE,message=TRUE,error=FALSE,tidy=TRUE}
+dv1<-c(1,0,0,0,1,0,1,1,0,1,0,0,1,1,1,0,1,0,0,1)
+#Here we use our first dependent variable: voter turnout as an exmaple.
+t1<-c(0,1,0,0,1,0,1,1,0,0,0,1,0,1,0,1,0,0,0,1)
+#Here is our first treatment: non-racial negative ad.
+sex<-c(2,1,1,2,1,2,2,1,2,1,1,1,2,1,1,2,1,1,2,1)
+#In the measurement of gender, 1 represents male and 2 represents female.
+age<-c(32,40,35,51,24,63,34,53,46,72,52,36,74,67,61,48,28,39
+       ,82,27)
+income<-c(3,6,7,2,5,8,4,6,7,5,9,5,11,6,4,3,7,8,5,12)
+education<-c(3,5,10,7,8,2,6,4,7,9,11,5,1,6,5,4,7,5,8,10)
+urban<-c(2,1,3,2,1,3,1,1,3,1,2,3,1,2,1,1,1,2,3,1)
+rp<-c(1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,4,4,4,4,4)
+#rp is the ethnic-partisan intersection.
+#1 represents white Republicans, 
+#2 represents non-white Republicans, 
+#3 represents white Democrats, 
+#4 represents non-white Democrats.
+data<-data.frame(dv1,t1,sex,age,income,education,urban,rp)
+data$rp<-factor(data$rp)
+print(data)
+```
+
+```{r permutation test, echo=TRUE,message=TRUE,error=FALSE,tidy=TRUE}
+newexperiment <- function(z, b) {
+  randomizr::block_ra(blocks = b, m = 1)
+}
+set.seed(13862917)
+teststats<-list()
+
+for(i in 1:10000){
+newdata<-data
+c1<-nrow(subset(newdata,t1==0))
+t1<-nrow(subset(newdata,t1==1))
+newdata$t1<-complete_ra(N=nrow(newdata),m_each=c(c1,t1))
+}
+
+meandiff1 <- function(y, z, b) {
+  # y is the first outcome variable 
+  #(suggest it is scaled party identification)
+  # z is the first treatment (suggest it is non-racial negative ad)
+  # b is block (the intersection of race and partisanship)
+   if (length(unique(b)) == 1) {
+    return(mean(y[z == 1]) - mean(y[z == 0]))
+  } else {
+    z <- z[order(b)]
+    y <- y[order(b)]
+    meandiff_y <- y[z == 1] - y[z == 0] 
+    diff1<- mean(meandiff_y)
+    return(diff1)
+  }
+}
+
+originalmd1 <- with(data, meandiff1(y = dv1, z = t1, b = rp))
+#This is the mean difference of our original assignment. 
+#dv1 refers to the first outcome variable, 
+#t1 refers to the first treatment, 
+#and rp refers to the blocks of ethnic-partisan intersection.
+set.seed(18362917)
+permutedmd1 <- replicate(10000, with(data, meandiff1(y = dv1, z = newexperiment(z = t1, b = rp), b = rp)))
+#Here we iterate 10000 times of permutations. 
+#We re-assign the first treatment group and follow the original size of assignment.
+mean(permutedmd1 >= originalmd1)
+#Here we compare the permuted mean differences with the original mean difference. 
+#We need to get the percentage that permutedmd1 is greater or equal to originalmd1.
+
+## Rosenbaum footnote on 2-sided p-values
+2 * min(mean(permutedmd1 >= originalmd1), mean(permutedmd1 <= originalmd1))
+
+```
+
+```{r multiple testing, echo=TRUE,message=TRUE,error=FALSE,tidy=TRUE}
+library(RItools)
+tb1 <- xBalance(t1 ~ sex + age + education + income + urban, 
+                strata = list(pair =~rp), data = data, report = "all")
+#Here we compare the standardized differences between the stratifications we have.
+pvalues <- tb1$results[, "p", ]
+#Here we get the p-values that is used to test the null hypothesis (no difference).
+p.adjust(pvalues, method="bonferroni")
+#Here we adjust the p-values.
+
+```
+
+```{r FWER, echo=TRUE,message=TRUE,error=FALSE,tidy=TRUE}
+FWERfunction <- function(simulations, trt, outcome, block, data) {
+  require(RItools)
+  outpaired <- outcome - ave(outcome, block)
+  output <- foreach(1:simulations,
+    .packages = "RItools",
+    
+    .export = c("newexperiment"),
+    .combine = "cbind"
+  ) %dopar% {
+
+    data$newt1 <- newexperiment(z = trt, b = block)
+    xb <- xBalance(newt1 ~ sex + age + education + income + urban, 
+                   strata = list(pair =~rp), data = data, report = "all")
+    pvalues <- xb$results[, "p", ]
+    return(pvalues)
+  }
+  return(output)
+}
+
+#Here we create the function for FWER.
+
+set.seed(18362917)
+fwer_res <- FWERfunction(10000, trt = data$t1, outcome = data$dv1, 
+                         block = data$rp, data = data)
+FPR <- apply(fwer_res, 2, function(x) {
+  any(x <= .5)
+})
+FWER <- mean(FPR)
+
+adjustedFPR <- apply(fwer_res, 2, function(x) {
+  any(p.adjust(x) <= .5)
+})
+adjustedFWER <- mean(adjustedFPR)
+
+```
+
+```{r comparing estimators, echo=TRUE,message=TRUE,error=FALSE,tidy=TRUE}
+set.seed(18362917)
+Est <- function(obsz, data) {
+	newExperiment <- function(z) {
+		sample(z)
+	}
+	data$newt1 <- newExperiment(obsz)
+	data$dv1 <- with(data, newt1*dv1+(1-newt1)*dv1)
+	
+	est1 <- coef(lm(dv1 ~ newt1 + sex + age + education + income + urban,
+	                data = data))[["newt1"]]
+	est2 <- coef(lm(dv1 ~ newt1, data = data))[["newt1"]]
+	data$e1 <- residuals(lm(dv1 ~ newt1 + sex + age + education + income + urban, 
+	                        data = data))
+	est3 <- coef(lm(e1 ~ newt1, data = data))[["newt1"]]
+	
+	return(c(
+		 ATE1 = est1,
+		 ATE2 = est2,
+		 ATE3 = est3
+		 ))
+}
+
+#Comparing and assessing the estimators
+set.seed(18362917)
+estdists <- replicate(10000, Est(obsz = data$t1, data=data))
+sampdistvars <- apply(estdists, 1, var)
+apply(estdists,1,mean)
+
+#Getting MSE of each estimator
+MSEfunc<-function(actuals,predicts){
+  sqrt(mean((actuals-predicts)^2))
+}
+MSEforall<-function(obsz,dat){
+  newExperiment<-function(z){
+    sample(z)
+  }
+  dat$newt1<-newExperiment(obsz)
+  dat$dv1<-with(dat, newt1*dv1+(1-newt1)*dv1)
+  model_est1 <- lm(dv1 ~ newt1 + sex + age + education + income +    urban, 
+                   data = dat)
+  est1_MSE<-MSEfunc(actuals=dat$dv1,predicts=predict(model_est1,dat))
+  model_est2 <- lm(dv1 ~ newt1, data = dat)
+  est2_MSE<-MSEfunc(actuals=dat$dv1,predicts=predict(model_est2,dat))
+  dat$e1 <- residuals(lm(dv1 ~ newt1 + sex + age + education + income + urban, 
+                         data=dat))
+  model_est3<-lm(e1 ~ newt1, data = dat)
+  est3_MSE<-MSEfunc(actuals=data$dv1,predicts=predict(model_est3,dat))
+  return(c(
+    MSE1=est1_MSE,
+    MSE2=est2_MSE,
+    MSE3=est3_MSE
+    ))
+}
+
+set.seed(18362917)
+MSEdists <- replicate(10000, MSEforall(obsz = data$t1, dat = data))
+apply(MSEdists,1,mean)
+```
+
+\subsection{Survey Questions}
+1.	What is your sex?
+
+1 Male
+
+2 Female
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+2.	Can you tell me your year of birth, please? \\
+
+3.	Were you born in this U.S. or are you an immigrant?
+
+1 I am born in the U.S.
+
+2 I am an immigrant to the U.S.
+
+-99 Refuse to answer\\
+
+4.	What is the highest educational level that you have attained?
+
+1 No formal education
+
+2 Incomplete primary school
+
+3 Complete primary school
+
+4 Incomplete middle school
+
+5 Complete middle school
+
+6 Incomplete high school
+
+7 Complete high school
+
+8 Some university-level education, without degree
+
+9 University-level education, with degree
+
+10 Some graduate-level education, without degree
+
+11 Graduate-level education, with degree
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+5.	How much is the household income, as you estimate?
+
+1 No More than \$25,000
+
+2 \$25,001 – 35,000
+
+3 \$35,001 – 45,000
+
+4 \$45,001 – 55,000
+
+5 \$55,001 – 65,000
+
+6 \$65,001 – 75,000
+
+7 \$75,001 – 85,000
+
+8 \$85,001 – 95,000
+
+9 \$95,001 – 105,000
+
+10 \$105,001 – 155,000
+
+11 \$155,001 – 200,000
+
+12 More than \$200,000 
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+6.	Which area do you live in?
+
+1 Urban
+
+2 Suburban
+
+3 Rural\\
+
+7.	Which ethnic group do you identify yourself as?
+
+1 White, non-Hispanic
+
+2 Black, non-Hispanic
+
+3 Latinx
+
+4 East and Southeast Asian
+
+5 South Asian
+
+6 Arabic and Central Asian
+
+7 Native American
+
+8 Other
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+8.	Have you voted for the last election of the Virginia House of Delegates?
+
+1 Yes
+
+2 No
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+9. Have you registered for the primary election of the Virginia House of Delegates on June 8?
+
+1 Yes
+
+2 No
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+10.	Have you registered for the election of the Virginia House of Delegates on November 2?
+
+1 Yes
+
+2 No
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+11.	Will you register for the election of the Virginia House of Delegates on November 2?
+
+1 Yes
+
+2 Undecided
+
+3 No
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+12.	If yes for Q10 and Q11, which party have you registered (or will you register) for?
+
+1 Democratic Party
+
+2 Republican Party
+
+3 Independent
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+13.	How strongly do you support the party you registered (or will register) for?
+
+1 Strongly support
+
+2 Fairly support
+
+3 Slightly support
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+Treatments: no negative ad (control), negative ad not about race (treatment 1), Democrat attacking Republican (treatment 2), Republican attacking Democrat (treatment 3)\\
+
+14.	Do you still plan to vote or not for the State House Election?
+
+1 Yes
+
+2 No
+
+3 Undecided
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+15.	If yes, which party will you vote for?
+
+1 Democratic Party
+
+2 Republican Party
+
+3 Independent
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+16.	How strongly do you support the party you will vote for?
+
+1 Strongly support
+
+2 Fairly support
+
+3 Slightly support
+
+-98 Not applicable
+
+-99 Refuse to answer\\
+
+\section{Reference}
+
+Hillygus, D. Sunshine, Todd G. Shields. 2008. \textit{The Persuadable Voter: Wedge Issues in Presidential Campaigns}. Princeton, NJ: Princeton University Press.\
+
+Mendelberg, Tali. 2001. \textit{The Race Card: Campaign Strategy, Implicit Messages, and the Norm of Equality}. Princeton, NJ: Princeton University Press.
+Tajfel, Henri, and John Turner. 1979. “An Integrative Theory of Intergroup Conflict.” In \textit{Intergroup Relations: Essential Readings}, Key readings in social psychology, New York, NY, US: Psychology Press, 94–109.\
+
+Tajfel, Henri, and John Turner. 1979. “An Integrative Theory of Intergroup Conflict.” In\textit{Intergroup Relations: Essential Readings}, Key readings in social psychology, New York, NY, US: Psychology Press, 94–109.\
+
+Valentino, Nicholas A., Vincent L. Hutchings, and Ismail K. White. 2002. “Cues that Matter: How Political Ads Prime Racial Attitudes During Campaigns.” \textit{American Political Science Review}. 96(1): 75-90.
